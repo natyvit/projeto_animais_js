@@ -10,7 +10,8 @@ export default class MenuMobil {
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.ativo);
     this.btnMenu.classList.add(this.ativo);
     outsideClick(this.menuList, this.events, () => {
